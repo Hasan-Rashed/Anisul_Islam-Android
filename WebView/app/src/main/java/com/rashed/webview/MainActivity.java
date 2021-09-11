@@ -23,6 +23,6 @@ public class MainActivity extends AppCompatActivity
         webSettings.setJavaScriptEnabled(true);
 
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("http://britannia.edu.bd/");
+        webView.loadUrl("https://britannia.edu.bd/");
     }
 }
