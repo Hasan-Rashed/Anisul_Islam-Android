@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FontInAndroid</string>
+    <string name="text1">JetBrainsMono_Medium</string>
+    <string name="text2">JetBrainsMono_BoldItalic</string>
+</resources>
