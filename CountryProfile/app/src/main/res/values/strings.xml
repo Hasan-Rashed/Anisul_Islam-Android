@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">CountryProfile</string>
+
+    <string name="bangladeshButton">Bangladesh</string>
+    <string name="indiaButton">India</string>
+    <string name="pakistanButton">Pakistan</string>
+
+    <string name="bangladeshText">
+
+        About Bangladesh Country Profile\n
+        officially the People\'s Republic of Bangladesh, is a country in South Asia.\n
+        It is the eighth-most populous country in the world, with a population exceeding 163 million\n
+        people, in an area of 148,560 square kilometres (57,360 sq mi), making it one of the most\n
+        densely populated countries in the world.
+    </string>
+
+    <string name="indiaText">
+
+        India is the second-most populous country in the world (after China), with an estimated\n
+        population of 1.37 billion people (in 2020). The country is subdivided into 29 states\n
+        and seven Union Territories. With an area of 3,287,263 km²,\n
+        India is the 7th largest country in the world, about one-third the size of the USA.\n
+    </string>
+
+    <string name="pakistanText">
+        The Muslim-majority state of Pakistan was born out of the partition of the\n
+        Indian sub-continent in 1947, and has faced both domestic political upheavals and regional confrontations.\n
+        Created to meet the demands of Indian Muslims for their own homeland, Pakistan was originally made up of two parts.\n
+    </string>
+
+    <string name="titleText">This is a title</string>
+    <string name="messageText">Do you want to exit? </string>
+</resources>
