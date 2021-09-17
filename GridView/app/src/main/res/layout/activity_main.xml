@@ -5,17 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
     tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/listView"
+    <GridView
+        android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="#000000"
-        android:dividerHeight="2dp"
-        android:listSelector="#2196F3">
-
-    </ListView>
+        android:numColumns="3"
+        android:listSelector="#2196F3"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"/>
 
 </LinearLayout>
