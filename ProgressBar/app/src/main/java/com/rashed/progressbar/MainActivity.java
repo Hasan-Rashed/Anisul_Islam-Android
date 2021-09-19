@@ -1,6 +1,7 @@
 package com.rashed.progressbar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.WindowDecorActionBar;
 
 import android.os.Bundle;
 import android.widget.ProgressBar;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        
         setContentView(R.layout.activity_main);
 
         progressBar = findViewById(R.id.progressBar);
