@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ExpandableListView</string>
+
+    <string-array name="Names">
+
+        <item>normal</item>
+        <item>natural</item>
+        <item>weed</item>
+        <item>wine</item>
+    </string-array>
+
+    <string-array name="alcohol">
+        <item>Vodka</item>
+        <item>Rum</item>
+        <item>Whiskey</item>
+        <item>Gin</item>
+        <item>Tequila</item>
+        <item>Espresso</item>
+        <item>Macchiato</item>
+        <item>Cappuccino</item>
+        <item>Cafe Latte</item>
+        <item>Ristretto</item>
+        <item>Carbonara</item>
+        <item>Capellini</item>
+        <item>Spaghetti</item>
+        <item>Gnocchi</item>
+        <item>Lasagnette</item>
+        <item>Cola</item>
+        <item>Lemonade</item>
+        <item>Citrus soda</item>
+        <item>Juice</item>
+        <item>Sparkling Water</item>
+
+    </string-array>
+
+</resources>
