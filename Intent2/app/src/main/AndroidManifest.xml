@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Intent2">
-        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".SecondActivity"
+            android:parentActivityName=".FirstActivity"
+            >
+
+        </activity>
         <activity
             android:name=".FirstActivity"
             android:exported="true">
