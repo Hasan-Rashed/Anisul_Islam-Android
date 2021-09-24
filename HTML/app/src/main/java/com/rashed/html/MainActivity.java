@@ -3,11 +3,16 @@ package com.rashed.html;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Html;
+import android.view.View;
 import android.webkit.WebView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
 {
-    private WebView webView;
+    //private WebView webView;
+    private TextView textView;
+
     String string = "<h1> This is heading 1</h1>\n" +
                     "<h2> This is heading 2</h2>\n" +
                     "<h3> This is heading 3</h3>\n" +
@@ -30,8 +35,10 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        webView = findViewById(R.id.webView);
+//        webView = findViewById(R.id.webView);
+//        webView.loadDataWithBaseURL(null, string, "text/html", "utf-8", null);
 
-        webView.loadDataWithBaseURL(null, string, "text/html", "utf-8", null);
+        textView = findViewById(R.id.textView);
+        textView.setText(Html.fromHtml(string));
     }
 }
