@@ -85,4 +85,26 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
         return cursor;
     }
+
+    public boolean updateData(String id, String name, String age, String gender)
+    {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(ID, id);
+        contentValues.put(NAME, name);
+        contentValues.put(AGE, age);
+        contentValues.put(GENDER, gender);
+
+        sqLiteDatabase.update(TABLE_NAME, contentValues, ID + " = ?", new String[] {id});
+
+        return true;
+    }
+
+    public int deleteData(String id)
+    {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+
+        return sqLiteDatabase.delete(TABLE_NAME, ID + " = ?", new String[] {id});
+    }
 }

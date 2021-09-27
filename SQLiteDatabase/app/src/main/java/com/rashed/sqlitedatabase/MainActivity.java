@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 {
     DatabaseHelper databaseHelper;
 
-    private EditText nameEditText, ageEditText, genderEditText;
-    private Button addButton, displayButton;
+    private EditText nameEditText, ageEditText, genderEditText, idEditText;
+    private Button addButton, displayButton, updateButton, deleteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -32,9 +32,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         genderEditText = findViewById(R.id.genderEditText);
         addButton = findViewById(R.id.addButton);
         displayButton = findViewById(R.id.displayButton);
+        updateButton = findViewById(R.id.updateButton);
+        idEditText = findViewById(R.id.idEditText);
+        deleteButton = findViewById(R.id.deleteButton);
 
         addButton.setOnClickListener(this);
         displayButton.setOnClickListener(this);
+        updateButton.setOnClickListener(this);
+        deleteButton.setOnClickListener(this);
     }
 
     @Override
@@ -43,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String name = nameEditText.getText().toString();
         String age = ageEditText.getText().toString();
         String gender = genderEditText.getText().toString();
+        String id = idEditText.getText().toString();
 
         if (view.getId() == R.id.addButton)
         {
@@ -80,6 +86,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             showData("ResultSet", stringBuffer.toString());
+        }
+
+        else if (view.getId() == R.id.updateButton)
+        {
+            Boolean isUpdated = databaseHelper.updateData(id, name, age, gender);
+
+            if (isUpdated == true)
+            {
+                Toast.makeText(getApplicationContext(), "Data is updated", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(), "Data is not updated", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        else if (view.getId() == R.id.deleteButton)
+        {
+            int value = databaseHelper.deleteData(id);
+
+            if (value > 0)
+            {
+                Toast.makeText(getApplicationContext(), "Data is deleted", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(), "Data is not deleted", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
